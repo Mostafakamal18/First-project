@@ -1,0 +1,39 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* top-menu  */
+.top-menu{
+    background-color: #173a69; 
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+    
+.field{
+    color: aliceblue; 
+}
+
+.phone-mail a{
+    text-decoration: none;
+    margin-right: 20px;
+    color: aliceblue;   
+}
+.phone-mail  {
+    display: flex;
+    margin-left: 5px;
+
+}
+ 
+.social-icon ul li {
+list-style: none;
+margin-right: 30px;
+font-size: 30px;
+}
+.field{
+    color: aliceblue;
+    font-size: 16px;
+}
+.social-icon ul{
+    display: flex;
+}
