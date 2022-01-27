@@ -47,6 +47,7 @@ font-size: 30px;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
 }
+
 .nav-bar{
     display: flex;
     margin-top: 10px;
@@ -105,7 +106,9 @@ font-size: 30px;
     
 }
 .btn{
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-right: 317px;
+    
 
 }
 .btn-2{
@@ -166,12 +169,16 @@ font-size: 30px;
 .gallery-images{
 margin: 50px;
 }
-.imp-img{
-    height: 278px;
+ .imp-img:hover{
+ background-color: aqua;
 }
 .gallery-image img{
     width: 90%;
 }
+.gallery-images .gallery-image img::after{
+    background-color: aqua;
+}
+
 .gallery-images{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -207,6 +214,30 @@ margin: 50px;
 text-align: center;
 padding: 20px;
 color: #fff;
+}
+.social-icon1{
+    text-align: center;
+    margin-top: 20px;
+    
+}
+.social-icon1 i{
+   margin: 10px;
+    text-align: center; 
+    border-radius: 50%;
+    background-color:#2067c4;
+    padding: 5px;
+    color: white;
+}
+/* footer  */
+
+.footer{
+    background-color: black;
+    color: blanchedalmond;
+    text-align: center;
+    font-size: 10px;
+    padding: 20px;
+    text-transform: capitalize;
+    margin-top: 50px;
 }
 
 
