@@ -153,15 +153,12 @@ font-size: 30px;
 .gallery-images{
 margin: 50px;
 }
- .imp-img:hover{
- background-color: aqua;
-}
+ 
+
 .gallery-image img{
     width: 100%;
 }
-.gallery-images .gallery-image img::after{
-    background-color: aqua;
-}
+
 
 .gallery-images{
     display: grid;
@@ -170,6 +167,38 @@ margin: 50px;
     column-gap:25px;
    
     
+}
+.gallery-image{
+    position: relative;
+}
+
+.gallery-image::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: rgb(248, 247, 247);
+    bottom:0;
+    right:0;
+    opacity: .5;
+    transition: 2s;
+}
+
+.gallery-image:hover::after{
+    width: 100%;
+
+}
+
+.hover-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+opacity: 0;
+transition: 1s;
+}
+.gallery-image:hover .hover-img{
+    opacity: .8;
 }
 .btn a{
     color:white;
@@ -189,7 +218,7 @@ margin: 50px;
 }
     
     
-
+/* -------- logo add----------- */
 .Logo{
     margin-top: 30px;
     text-align: center;
@@ -229,39 +258,6 @@ color: #fff;
     padding: 20px;
     text-transform: capitalize;
     margin-top: 50px;
-}
-/* ----------- */
-.gallery-image{
-    position: relative;
-}
-
-.gallery-image::after{
-    position: absolute;
-    content: "";
-    height: 100%;
-    width: 0;
-    background-color: rgb(236, 227, 227);
-    top:0;
-    left:0;
-    opacity: .5;
-    transition: 2s;
-}
-
-.gallery-image:hover::after{
-    width: 100%;
-
-}
-
-.hover-img{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-opacity: 0;
-transition: 1s;
-}
-.gallery-image:hover .hover-img{
-    opacity: .8;
 }
 
 
