@@ -7,6 +7,12 @@ body{
     font-family: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
+
+.container{
+    max-width: 1350px;
+    width: 100%;
+    margin:0 auto;
+}
 /* top-menu  */
 .top-menu{
     background-color: #173a69; 
@@ -46,6 +52,18 @@ list-style: none;
 margin-right: 30px;
 font-size: 30px;
 }
+.social-icon .hover-1:hover{
+    color:#2962ff ;
+    transition: 1s;
+}
+.social-icon .hover-2:hover{
+    color: #5da9dd;
+    transition: 1s;
+}
+.social-icon .hover-3:hover{
+    color: #219f61;
+    transition: 1s;
+}
 .field{
     color: aliceblue;
     font-size: 16px;
@@ -68,7 +86,7 @@ font-size: 30px;
     height: 3px;
     width:0px;
     background-image: linear-gradient(yellowgreen, gray);
-    bottom: -15px;
+    bottom: -35px;
     left: 50%;
     transition: .5s;
      transform: translate(-50%);
@@ -89,6 +107,9 @@ font-size: 30px;
    
 
 }
+.nav-bar img{
+  width: 115%; 
+}
 /* banner-section */
 .dari{
     margin: auto;
@@ -100,10 +121,28 @@ font-size: 30px;
 .banner-section{
     background-image: url(images/bannaer-img.jpg);
     background-size: cover;
+    background-size: 100%, 100%;
     background-repeat: no-repeat;
     background-position: center;
     height: 430px;
-    box-shadow: gray;
+    padding: 160px 0;
+    position: relative;
+    z-index: 999999;
+}
+.banner-section::after {
+    position: absolute;
+    content: "";
+    background-image: url("images/ovarlay-4.jpg");
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: .2;
+    top: 0;
+   
 }
 .banner-section .banner-title{
   float: right;
@@ -130,22 +169,39 @@ font-size: 30px;
  }
 
 .batton{
-    margin-top: 10px;
+    margin-top: 20px;
+    
 }
-.batton a {
+.Btn-1 {
     color:white;
     text-decoration: none;
     background-color:#173a69;
     padding: 8px;
-    border-radius: 8px;
-    font-weight: 700px
-    ;
+    font-weight: 700px  ;
     text-transform: uppercase;
+    
  }
-.batton a:hover{
-    background-color:rgb(21, 128, 96);
+.Btn-2 {
+    color:black;
+    text-decoration: none;
+    background-color:transparent;
+    padding: 8px;
+    border: 1px solid;
+    font-weight: 700px;
+    
+    text-transform: uppercase;
+    margin-left: 8px;
+ }
+.Btn-1:hover{
+    background-color:rgb(92, 146, 228);
     transition: 1s;
 }
+.Btn-2:hover{
+   
+    background-color: rgb(136, 129, 129);
+    transition: 1s;
+}
+
 /* service-offer */
 .center{
     text-align: center;
@@ -155,16 +211,24 @@ font-size: 30px;
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
+    text-align: center;
 }
-.service-item h3{
-    color:#173a69 ;
+.service-item h5{
+    color:black ;
     margin-top: 10px;
 
 }
 /* about-section */
 .about-section{
     background-image: url(images/about-backgroubnd-img.jpg);
-    margin-top: 85px;
+    /* margin-top: 85px; */
+    margin: 100px 0;
+    background-position: center;
+    background-size: cover;
+    padding: 40px;
+    top: 150px;
+    background-repeat: no-repeat;
+    
 
 }
 .abouts-item{
@@ -174,9 +238,12 @@ font-size: 30px;
      
 
 }
+.half-width{
+    width: 50%;
+}
 .image img{
-    margin-left: 100px;
-    margin-top: 50px;
+   
+    width: 100%;
     
 }
 .about-title{
@@ -191,9 +258,6 @@ font-size: 30px;
 }
 .gallery img{
     margin: top 100px;
-}
-.gallery-images{
-margin: 50px;
 }
  
 
@@ -218,16 +282,17 @@ margin: 50px;
     position: absolute;
     content: "";
     height: 100%;
-    width: 0;
-    background-color: rgb(248, 247, 247);
+    width: 100%;
+    background-color:white;
     bottom:0;
     right:0;
-    opacity: .5;
+    opacity: 0;
     transition: 2s;
 }
 
 .gallery-image:hover::after{
     width: 100%;
+    opacity: .7;
 
 }
 
@@ -240,27 +305,35 @@ opacity: 0;
 transition: 1s;
 }
 .gallery-image:hover .hover-img{
-    opacity: .8;
+    opacity:1;
+    
+}
+.center2{
+    font-size: 26px;
+    margin-left: 40px;
+color: black;
 }
 .btn a{
     color:white;
     text-decoration: none;
     background-color:#173a69;
     padding: 8px;
-    border-radius: 8px;
+   
     font-weight: 700px
     ;
     text-transform: uppercase;
 }
 .btn  {
-    text-align: center;
-    margin-bottom: 20px;
     
+        text-align: center;
+        margin-bottom: 50px;
+        margin-top: 41px;
     
 }
 .btn a:hover{
     background-color: rgb(112, 108, 108);
     transition: 1s;
+    
 }
     
   /* ------ */
@@ -280,10 +353,19 @@ font-size: 24px;
     text-align: center;
     font-size: 40px;
 }
+.Logo img{
+    width: 25%;
+}
 .social-icon1{
     text-align: center;
     margin-top: 20px;
     
+}
+.social-icon1{
+    list-style: none;
+    display: flex;
+   justify-content: center;
+   
 }
 .social-icon1 i{
    margin: 10px;
@@ -291,14 +373,14 @@ font-size: 24px;
     border-radius: 50%;
     height: 20px;
     width: 20px;
-    background-color:#edeff1;
+    background-color:#d7dadd;
     padding: 5px;
     color: black;
     border: 1px solid;
 }
-.social-icon1 i:hover{
+ .social-icon1 i:hover{
 color: #173a69;
-}
+} 
 /* footer  */
 
 .footer{
